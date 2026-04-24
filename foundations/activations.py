@@ -12,11 +12,5 @@ class Solution:
     def relu(self, z: NDArray[np.float64]) -> NDArray[np.float64]:
         # z is a 1D NumPy array
         # Formula: max(0, z) element-wise
-        ans = []
-        for i in z:
-            if i <= 0:
-                ans.append(0.0)
-            else:
-                ans.append(i)
-        return ans
+        return np.maximum(0,z)
 

@@ -14,8 +14,5 @@ class Solution:
             list_e.append(np.exp(i))
         s = sum(list_e)
         values = list_e/s
-        ans = []
-        for value in values:
-            ans.append(round(value,4))
     
-        return ans
+        return np.round(values,4)

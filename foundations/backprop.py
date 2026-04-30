@@ -14,8 +14,7 @@ class Solution:
         # Loss: L = 0.5 * (y_hat - y_true)^2
         # Return: (dL_dw rounded to 5 decimals, dL_db rounded to 5 decimals)
         z = np.dot(x,w) + b
-        y_hat = 1/(1+ np.exp(-z))
-        l = 0.5 * (y_hat - y_true)**2
+        y_hat = 1 / (1+ np.exp(-z))
         dl_dw = []
         for i in range(len(x)):
             dl_dw.append((y_hat - y_true) * y_hat * (1 - y_hat) * x[i])

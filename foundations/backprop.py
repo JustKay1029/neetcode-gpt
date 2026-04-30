@@ -18,4 +18,4 @@ class Solution:
         dl_dz = (y_hat - y_true) * y_hat * (1 - y_hat)
         dl_dw = dl_dz * x
         dl_db = dl_dz
-        return (np.round(dl_dw,5), round(dl_db,5))
+        return (np.round(dl_dw,5), np.round(dl_db,5))
